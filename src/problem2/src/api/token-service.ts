@@ -13,7 +13,6 @@ export const fetchTokenData = async () => {
   const response = await axios.get<TokenResponse>(
     "https://interview.switcheo.com/prices.json"
   );
-  console.log(response);
   return Object.entries(response.data)
     .map(([, data]) => ({
       currency: data.currency,
